@@ -18,7 +18,7 @@ This project documents my journey in building a **home lab** that simulates a re
 
 ## Hardware
 - **Laptop**: LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
-- ** Mini PC**: [Beelink](https://www.lazada.com.ph/products/beelink-mini-pc-ser7ser6-max-ryzen-7-7840hs-7735hs-radeon-780m-ddr5-pcie40-ssd-quad-display-wifi6-bluetooth-52-desktop-computer-i4302917834-s24152074171.html?) (coming soon).
+- **Mini PC**: [Beelink](https://www.lazada.com.ph/products/beelink-mini-pc-ser7ser6-max-ryzen-7-7840hs-7735hs-radeon-780m-ddr5-pcie40-ssd-quad-display-wifi6-bluetooth-52-desktop-computer-i4302917834-s24152074171.html?) (coming soon).
 
 ## Software Requirements
 ### Essential ISOs
