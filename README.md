@@ -11,7 +11,7 @@ This project documents my journey in building a **home lab** that simulates a re
 1. [Hardware Requirements](#hardware-requirements)
 2. [Software Requirements](#software-requirements)
 3. [Setup Process](#-setup-process)
-4. [Lab Infrastructure](#-lab-infrastructure)
+4. [Lab Infrastructure](#lab-infrastructure)
 5. [Documentation](#-documentation)
 6. [Future Improvements](#-future-improvements)
 7. [Advanced Hands-On Activities](#advanced-hands-on-activities)
@@ -57,7 +57,7 @@ This project documents my journey in building a **home lab** that simulates a re
 6. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
 7. **Perform security testing** with Kali Linux & Metasploitable.
 
-## 🖥️ Lab Infrastructure
+## Lab Infrastructure
 | **VM Name** | **OS** | **Role** | **Purpose** |
 |------------|--------|----------|-------------|
 | **DC1** | Windows Server 2022 | Active Directory, DNS, DHCP | Centralized authentication & network services |
