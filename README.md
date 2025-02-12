@@ -11,7 +11,7 @@ This project documents my journey in building a **home lab** that simulates a re
 1. [Hardware Requirements](#hardware-requirements)
 2. [Software Requirements](#software-requirements)
 3. [Initial Setup](#initial-setup)
-4. [Virtual Machine Configuration](#virtual-machine-configuration)
+4. [Lab Infrastructure](#lab-infrastructure)
 5. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 6. [Documentation and Showcasing](#documentation-and-showcasing)
 
