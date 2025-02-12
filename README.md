@@ -21,32 +21,32 @@ This project documents my journey in building a **home lab** that simulates a re
 
 ## Software Requirements
 ### Essential ISOs
-- **Proxmox VE**: Main hypervisor.
+- **[Proxmox VE](https://www.proxmox.com/en/)**: Main hypervisor.
 - **Windows Server 2022**: Server roles such as AD, DNS, DHCP.
 - **Windows 10/11**: Client OS for testing.
-- **Ubuntu Server**: Web hosting, database servers, security tools.
-- **Kali Linux**: Penetration testing.
-- **pfSense**: Firewall and networking.
+- **[Ubuntu Server](https://ubuntu.com/download/server)**: Web hosting, database servers, security tools.
+- **[Kali Linux](https://www.kali.org/)**: Penetration testing.
+- **[pfSense](https://www.pfsense.org/)**: Firewall and networking.
 - **[Metasploitable](https://github.com/rapid7/metasploitable3/blob/master/README.md)**: Vulnerable VM for pentesting practice.
 
 ### Additional ISOs
-- **CentOS**
-- **Debian**
-- **FreeBSD**
+- **[CentOS](https://www.centos.org/)**
+- **[Debian](https://www.debian.org/)**
+- **[FreeBSD](https://www.freebsd.org/)**
 
 ### Essential Software
-- **Ventoy**: Bootable USB creation.
-- **Rufus**: Bootable USB creation.
-- **PuTTY**: SSH and remote management.
-- **WinSCP**: Secure file transfers.
-- **Visual Studio Code**: Scripting and configuration.
-- **Wireshark**: Network analysis.
-- **Nmap**: Network scanning.
-- **OpenVPN**: VPN testing.
-- **Suricata**: Intrusion detection and prevention.
-- **Wazuh**: SIEM and security monitoring.
-- **GNS3**: Network simulation.
-- **Docker**: Containerized applications.
+- **[Ventoy](https://www.ventoy.net/en/index.html)**: Bootable USB creation.
+- **[Rufus](https://rufus.ie/en/)**: Bootable USB creation.
+- **[PuTTY](https://www.putty.org/)**: SSH and remote management.
+- **[WinSCP](https://winscp.net/eng/download.php)**: Secure file transfers.
+- **[Visual Studio Code](https://code.visualstudio.com/)**: Scripting and configuration.
+- **[Wireshark](https://www.wireshark.org/)**: Network analysis.
+- **[Nmap](https://nmap.org/)**: Network scanning.
+- **[OpenVPN](https://openvpn.net/)**: VPN testing.
+- **[Suricata](https://suricata.io/)**: Intrusion detection and prevention.
+- **[Wazuh](https://wazuh.com/)**: SIEM and security monitoring.
+- **[GNS3](https://www.gns3.com/)**: Network simulation.
+- **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
 ## 🔧 Setup Process
 1. **Install Proxmox VE** on the host machine.
