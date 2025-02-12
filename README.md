@@ -10,10 +10,11 @@ This project documents my journey in building a **home lab** that simulates a re
 ## Table of Contents
 1. [Hardware Requirements](#hardware-requirements)
 2. [Software Requirements](#software-requirements)
-3. [Initial Setup](#initial-setup)
+3. [Setup Process](#setup-process)
 4. [Lab Infrastructure](#lab-infrastructure)
-5. [Advanced Hands-On Activities](#advanced-hands-on-activities)
-6. [Documentation and Showcasing](#documentation-and-showcasing)
+5. [Documentation](#documentation)
+6. [Future Improvements](#future-improvements)
+7. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 
 ## Hardware Requirements
 - **Laptop**: LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
@@ -26,7 +27,7 @@ This project documents my journey in building a **home lab** that simulates a re
 - **Ubuntu Server**: Web hosting, database servers, security tools.
 - **Kali Linux**: Penetration testing.
 - **pfSense**: Firewall and networking.
-- **Metasploitable**: Vulnerable VM for pentesting practice.
+- **[Metasploitable](https://github.com/rapid7/metasploitable3/blob/master/README.md)**: Vulnerable VM for pentesting practice.
 
 ### Additional ISOs
 - **CentOS**
@@ -47,6 +48,15 @@ This project documents my journey in building a **home lab** that simulates a re
 - **GNS3**: Network simulation.
 - **Docker**: Containerized applications.
 
+## 🔧 Setup Process
+1. **Install Proxmox VE** on the host machine.
+2. **Create and configure VMs** with allocated resources.
+3. **Set up core services** (Active Directory, DNS, DHCP, File Server, etc.).
+4. **Secure the network** with **pfSense firewall & VPN**.
+5. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
+6. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
+7. **Perform security testing** with Kali Linux & Metasploitable.
+
 ## 🖥️ Lab Infrastructure
 | **VM Name** | **OS** | **Role** | **Purpose** |
 |------------|--------|----------|-------------|
@@ -64,15 +74,6 @@ This project documents my journey in building a **home lab** that simulates a re
 | **KALI** | Kali Linux | Pentesting Workstation | Ethical hacking & security testing |
 | **METASPLOIT** | Metasploitable | Vulnerable VM | Cybersecurity practice target |
 | **BACKUP** | Ubuntu Server | Backup & Recovery | Disaster recovery & backup system |
-
-## 🔧 Setup Process
-1. **Install Proxmox VE** on the host machine.
-2. **Create and configure VMs** with allocated resources.
-3. **Set up core services** (Active Directory, DNS, DHCP, File Server, etc.).
-4. **Secure the network** with **pfSense firewall & VPN**.
-5. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
-6. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
-7. **Perform security testing** with Kali Linux & Metasploitable.
 
 ## 📜 Documentation
 - **[Proxmox Installation & VM Setup](Setup_Guides/Proxmox_Install.md)**
