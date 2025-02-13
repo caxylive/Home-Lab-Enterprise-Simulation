@@ -13,11 +13,10 @@ This project documents my journey in building a **home lab** that simulates a re
 ## Table of Contents
 1. [Hardware](#hardware)
 2. [Software Requirements](#software-requirements)
-3. [Setup Process](#-setup-process)
+3. [Setup Process and Documentation](#-setup-process-and-documentation)
 4. [Lab Infrastructure](#lab-infrastructure)
-5. [Documentation](#-documentation)
-6. [Future Improvements](#-future-improvements)
-7. [Advanced Hands-On Activities](#advanced-hands-on-activities)
+5. [Future Improvements](#-future-improvements)
+6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 
 ## Hardware
 - **Laptop**: LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
@@ -53,14 +52,15 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[GNS3](https://www.gns3.com/)**: Network simulation.
 - **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
-## 🔧 Setup Process
-1. **Install Proxmox VE** on the host machine.
-2. **Create and configure VMs** with allocated resources.
-3. **Set up core services** (Active Directory, DNS, DHCP, File Server, etc.).
-4. **Secure the network** with **pfSense firewall & VPN**.
+## 🔧 Setup Process and Documentation
+1. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
+2. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
+3. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
+4. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
 5. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
-6. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
-7. **Perform security testing** with Kali Linux & Metasploitable.
+6. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
+7. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
+8. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
 
 ## Lab Infrastructure
 | **VM Name** | **OS** | **Role** | **Purpose** |
@@ -82,7 +82,7 @@ This project documents my journey in building a **home lab** that simulates a re
 
 ## 📜 Documentation
 - **[Proxmox Installation & VM Setup](Setup_Guides/Proxmox_Install.md)**
-- **[Windows Server Configuration](Setup_Guides/Windows_Server.md)**
+- **[Server Configuration](Setup_Guides/Server_Configuration.md)**
 - **[pfSense Firewall Setup](Setup_Guides/pfSense.md)**
 - **[Network Simulation (GNS3)](Setup_Guides/GNS3.md)**
 - **[Pentesting with Kali & Metasploitable](Security/Kali_Pentest.md)**
