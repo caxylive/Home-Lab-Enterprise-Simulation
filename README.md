@@ -1,5 +1,8 @@
 # 🏠 Home Lab - Enterprise IT & Cybersecurity Simulation
 
+**Author**: Carl Xymon Verdejo
+**Contact**: carl.xymon.verdejo@gmail.com
+
 ## 📌 Overview
 This project documents my journey in building a **home lab** that simulates a real-world (small-medium business) **enterprise IT environment**. It includes detailed instructions for hardware setup, software installations, network configurations, and hands-on cybersecurity practices. The goal is to gain **hands-on experience** with:
 - **System Administration** (Windows Server, Active Directory, DNS, DHCP, File Sharing)
