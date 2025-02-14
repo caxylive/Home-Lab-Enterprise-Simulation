@@ -94,7 +94,7 @@ This project documents my journey in building a **home lab** that simulates a re
 - Implement **high availability & failover** for critical services.
 
 ## 🏆 Why This Project Matters
-This home lab serves as a **hands-on learning platform** to strengthen my skills in **IT, networking, and cybersecurity**, preparing me for **certifications (Network+, Security+, CCNA)** and a **career transition into IT**.
+This home lab serves as a **hands-on learning platform** to strengthen one's skills in **IT, networking, and cybersecurity**, preparing me for **certifications (Network+, Security+, CCNA)**.
 
 ---
 🔹 *This repository will be updated as the lab evolves.* Feel free to contribute ideas or improvements!
