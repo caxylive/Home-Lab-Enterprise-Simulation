@@ -1,7 +1,7 @@
 # 🏠 Home Lab - Enterprise IT & Cybersecurity Simulation
 
-**Author**: Carl Xymon Verdejo
-**Contact**: carl.xymon.verdejo@gmail.com
+- **Author**: Carl Xymon Verdejo
+- **Contact**: carl.xymon.verdejo@gmail.com
 
 ## 📌 Overview
 This project documents my journey in building a **home lab** that simulates a real-world (small-medium business) **enterprise IT environment**. It includes detailed instructions for hardware setup, software installations, network configurations, and hands-on cybersecurity practices. The goal is to gain **hands-on experience** with:
@@ -94,7 +94,8 @@ This project documents my journey in building a **home lab** that simulates a re
 - Implement **high availability & failover** for critical services.
 
 ## 🏆 Why This Project Matters
-This home lab serves as a **hands-on learning platform** to strengthen one's skills in **IT, networking, and cybersecurity**, preparing me for **certifications (Network+, Security+, CCNA)**.
+This home lab serves as a **hands-on learning platform** to strengthen skills in **IT, networking, and cybersecurity**. It enables one to experience setting up various IT infrastructures that provide real-world support to businesses. Additionally, it offers a safe environment to hone and practice Ethical Hacking skills legally, fostering continuous learning and professional growth.
+
 
 ---
-🔹 *This repository will be updated as the lab evolves.* Feel free to contribute ideas or improvements!
+🔹 *This repository will be updated as the lab evolves.* Feel free to contribute ideas or improvements! Let's gooo!!!
