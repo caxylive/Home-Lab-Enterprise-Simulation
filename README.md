@@ -53,14 +53,15 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
 ## 🔧 Setup Process and Documentation
-1. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
-2. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
-3. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
-4. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
-5. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
-6. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
-7. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
-8. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
+1. **Backup** files and create **bootable drives** (my tools of choices are **Ventoy** and **Rufus**). Refer [here}() for useful scripts for batch copying files.
+2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
+3. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
+4. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
+5. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
+6. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
+7. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
+8. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
+9. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
 
 ## Lab Infrastructure
 | **VM Name** | **OS** | **Role** | **Purpose** |
