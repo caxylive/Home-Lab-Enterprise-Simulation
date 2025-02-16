@@ -19,8 +19,11 @@ This project documents my journey in building a **home lab** that simulates a re
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 
 ## Hardware
-- **Laptop**: LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
-- **Mini PC**: [Beelink](https://www.lazada.com.ph/products/beelink-mini-pc-ser7ser6-max-ryzen-7-7840hs-7735hs-radeon-780m-ddr5-pcie40-ssd-quad-display-wifi6-bluetooth-52-desktop-computer-i4302917834-s24152074171.html?) (coming soon).
+- **Laptop**: repurposed LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
+- **Router**: I will not mention my router brand and model for security reasons (each model has **vulnerabilities** that hackers can **exploit**)
+- **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
+- **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
+- **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
 
 ## Software Requirements
 ### Essential ISOs
