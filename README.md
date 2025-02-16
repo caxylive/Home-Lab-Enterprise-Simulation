@@ -62,6 +62,8 @@ This project documents my journey in building a **home lab** that simulates a re
 4. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
 5. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
 6. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools).
+  - Wazuh
+  - Suricata
 7. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
 8. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
 9. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
