@@ -19,8 +19,8 @@ This project documents my journey in building a **home lab** that simulates a re
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 
 ## Hardware
-- **Laptop**: repurposed LG Gram 16 with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
-- **Router**: I will not mention my router brand and model for security reasons (each model has **vulnerabilities** that hackers can **exploit**)
+- **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
+- **Router**: I will **NOT** mention my router brand and model for security reasons (each model has **vulnerabilities** that hackers can **exploit**)
 - **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
 - **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
 - **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
