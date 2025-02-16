@@ -19,8 +19,8 @@ This project documents my journey in building a **home lab** that simulates a re
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 
 ## Hardware
-- **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
-- **Router**: I will **NOT** mention my router brand and model for security reasons (each model has **vulnerabilities** that hackers can **exploit**)
+- **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs. The more cores, memory, and storage, the better.
+- **Router**: I will **NOT** mention my router brand and model for security reasons (each model has their own unique **vulnerabilities** that hackers can **exploit**)
 - **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
 - **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
 - **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
@@ -56,7 +56,7 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
 ## 🔧 Setup Process and Documentation
-1. **Backup** files and create **bootable drives** (my tools of choices are **Ventoy** and **Rufus**). Refer [here}() for useful scripts for batch copying files.
+1. **Backup** files and create **bootable drives** (my tools of choices are **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
 2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
 3. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
 4. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
