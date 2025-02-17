@@ -57,7 +57,7 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
 ## 🔧 Setup Process and Documentation
-1. **Backup** files and create **bootable drives** (my tools of choices are **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
+1. **Backup** files and create **[bootable drives](https://github.com/caxylive/Common-Commands/blob/main/linux%20terminal/bootable_usb.md)** (my tools of choices are **dd**, **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
 2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
 3. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
 4. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
