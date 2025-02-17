@@ -64,3 +64,6 @@ dhclient wlx54c57a381134
   systemctl restart networking
   ```
 
+# Reference:
+1) https://forum.proxmox.com/threads/proxmox-over-wifi-wlan.123805/
+
