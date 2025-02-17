@@ -21,7 +21,7 @@ This project documents my journey in building a **home lab** that simulates a re
 
 ## Hardware
 - **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs. The more cores, memory, and storage, the better.
-- **Router**: I will **NOT** mention my router brand and model for security reasons (each model has their own unique **vulnerabilities** that hackers can **exploit**)
+- **Router**: I will **NOT** mention my router brand and model for security reasons (each model has their own unique **vulnerabilities** that hackers can **exploit** to gain access to your system)
 - **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
 - **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
 - **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
@@ -100,9 +100,11 @@ This project documents my journey in building a **home lab** that simulates a re
 - 
 
 ## Advanced Hands-On Activities
+- Advanced activities will be listed here once everything has been set up.
 
 ## Troubleshooting
 - Please refer **[here](https://github.com/caxylive/Home-Lab-Enterprise-Simulation/tree/main/Troubleshooting)** for a list of problems you might encounter and how to possibly solve them.
+- Incident response section will be added once all the servers and services has been set up.
 
 ## 🏆 Why This Project Matters
 This home lab serves as a **hands-on learning platform** to strengthen skills in **IT, networking, and cybersecurity**. It enables one to experience setting up various IT infrastructures that provide real-world support to businesses. Additionally, it offers a safe environment to hone and practice Ethical Hacking skills legally, fostering continuous learning and professional growth.
