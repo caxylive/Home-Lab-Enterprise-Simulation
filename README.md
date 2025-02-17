@@ -17,6 +17,7 @@ This project documents my journey in building a **home lab** that simulates a re
 4. [Lab Infrastructure](#lab-infrastructure)
 5. [Future Improvements](#-future-improvements)
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
+7. [Troubleshooting](#troubleshooting)
 
 ## Hardware
 - **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs. The more cores, memory, and storage, the better.
@@ -96,6 +97,12 @@ This project documents my journey in building a **home lab** that simulates a re
 - Add **SIEM threat hunting scenarios**.
 - Deploy **enterprise applications** (e.g., ERP, CRM, VoIP).
 - Implement **high availability & failover** for critical services.
+- 
+
+## Advanced Hands-On Activities
+
+## Troubleshooting
+- Please refer **[here](https://github.com/caxylive/Home-Lab-Enterprise-Simulation/tree/main/Troubleshooting)** for a list of problems you might encounter and how to possibly solve them.
 
 ## 🏆 Why This Project Matters
 This home lab serves as a **hands-on learning platform** to strengthen skills in **IT, networking, and cybersecurity**. It enables one to experience setting up various IT infrastructures that provide real-world support to businesses. Additionally, it offers a safe environment to hone and practice Ethical Hacking skills legally, fostering continuous learning and professional growth.
