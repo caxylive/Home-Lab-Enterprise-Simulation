@@ -4,8 +4,8 @@
 Proxmox Virtual Environment (Proxmox VE) is an open-source server virtualization platform that allows you to create and manage virtual machines and containers efficiently. This guide outlines the steps to install Proxmox VE on your system, configure basic settings, and prepare it for hosting virtual machines.
 
 ## Prerequisites
-### **Hardware Requirements**
-- **Laptop:** LG Gram 16 (Intel Core i7-1260P, 16GB DDR5 RAM, 2x 1TB SSDs)
+### **Hardware**
+- **Laptop:** Repurposed laptop with Intel Core i7-1260P, 16GB DDR5 RAM, 2x 1TB SSDs
 - **Bootable USB Drive:** At least 8GB (Ventoy recommended)
 - **Internet Connection:** Required for updates and package installations
 
