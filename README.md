@@ -1,7 +1,14 @@
+<a name="top'></a>
+
 # 🏠 Home Lab - Enterprise IT & Cybersecurity Simulation
 
-**Author**: Carl Xymon Verdejo </br>
+---
+
+**Author**: [Carl Xymon Verdejo](https://hardworking-lion-z4sd3b.mystrikingly.com/)
+
 **Contact**: carl.xymon.verdejo@gmail.com
+
+---
 
 ## 📌 Overview
 This project documents my journey in building a **home lab** that simulates a real-world (small-medium business) **enterprise IT environment**. It includes detailed instructions for hardware setup, software installations, network configurations, and hands-on cybersecurity practices. The goal is to gain **hands-on experience** with:
@@ -9,6 +16,8 @@ This project documents my journey in building a **home lab** that simulates a re
 - **Networking** (pfSense Firewall, VPN, GNS3 Network Simulations)
 - **Cybersecurity** (SIEM, IDS/IPS, Penetration Testing with Kali Linux & Metasploitable)
 - **DevOps & Virtualization** (Proxmox, Docker, Web & Database Servers)
+
+---
 
 ## Table of Contents
 1. [Hardware](#hardware)
@@ -19,12 +28,18 @@ This project documents my journey in building a **home lab** that simulates a re
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 7. [Troubleshooting](#troubleshooting)
 
+---
+
 ## Hardware
 - **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs. The more cores, memory, and storage, the better.
 - **Router**: I will **NOT** mention my router brand and model for security reasons (each model has their own unique **vulnerabilities** that hackers can **exploit** to gain access to your system)
 - **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
 - **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
 - **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
+
+[Back to Top](#top)
+
+---
 
 ## Software Requirements
 ### Essential ISOs
@@ -56,6 +71,10 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[GNS3](https://www.gns3.com/)**: Network simulation.
 - **[Docker](https://www.docker.com/resources/what-container/)**: Containerized applications.
 
+[Back to Top](#top)
+
+---
+
 ## 🔧 Setup Process and Documentation
 1. **Backup** files and create **[bootable drives](https://github.com/caxylive/Common-Commands/blob/main/linux%20terminal/bootable_usb.md)** (my tools of choices are **dd**, **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
 2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
@@ -66,6 +85,10 @@ This project documents my journey in building a **home lab** that simulates a re
 7. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
 8. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
 9. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
+
+[Back to Top](#top)
+
+---
 
 ## Lab Infrastructure
 | **VM Name** | **OS** | **Role** | **Purpose** |
@@ -85,6 +108,10 @@ This project documents my journey in building a **home lab** that simulates a re
 | **METASPLOIT** | Metasploitable | Vulnerable VM | Cybersecurity practice target |
 | **BACKUP** | Ubuntu Server | Backup & Recovery | Disaster recovery & backup system |
 
+[Back to Top](#top)
+
+---
+
 ## 📜 Documentation
 - **[Proxmox Installation & VM Setup](Setup_Guides/Proxmox_Install.md)**
 - **[Server Configuration](Setup_Guides/Server_Configuration.md)**
@@ -93,21 +120,41 @@ This project documents my journey in building a **home lab** that simulates a re
 - **[Pentesting with Kali & Metasploitable](Security/Kali_Pentest.md)**
 - **[Docker & Web Apps](Setup_Guides/Docker_Web.md)**
 
+[Back to Top](#top)
+
+---
+
 ## 🚀 Future Improvements
 - Add **SIEM threat hunting scenarios**.
 - Deploy **enterprise applications** (e.g., ERP, CRM, VoIP).
 - Implement **high availability & failover** for critical services.
 - 
 
+[Back to Top](#top)
+
+---
+
 ## Advanced Hands-On Activities
 - Advanced activities will be listed here once everything has been set up.
+
+[Back to Top](#top)
+
+---
 
 ## Troubleshooting
 - Please refer **[here](https://github.com/caxylive/Home-Lab-Enterprise-Simulation/tree/main/Troubleshooting)** for a list of problems you might encounter and how to possibly solve them.
 - Incident response section will be added once all the servers and services has been set up.
 
+[Back to Top](#top)
+
+---
+
 ## 🏆 Why This Project Matters
 This home lab serves as a **hands-on learning platform** to strengthen skills in **IT, networking, and cybersecurity**. It enables one to experience setting up various IT infrastructures that provide real-world support to businesses. Additionally, it offers a safe environment to hone and practice Ethical Hacking skills legally, fostering continuous learning and professional growth.
+
+[Back to Top](#top)
+
+---
 
 
 ---
