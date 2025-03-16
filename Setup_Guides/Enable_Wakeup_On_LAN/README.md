@@ -3,32 +3,38 @@
 
 ---
 
-## Check Network Interface Support
+## Check Network Interface Support:
 
-* Open the Proxmox shell and run:
+* Open the Proxmox terminal and run:
   ```Bash
   ethtool <interface_name>
   ```
-  Look for a line like `Supports Wake-on: g`. If it says `g`, your network card supports WoL.
+
+* Look for a line like `Supports Wake-on: g`.
+* If it says `g`, your network card supports WoL.
 
 [Back to Top](#top)
 
 ---
 
-## Enable WoL on the Network Interface (non-persistent)
+## Enable WoL on the Network Interface (Non-Persistent):
 
-* Even if the BIOS doesn't show a WoL option, the network card might still support it. The `ethtool` command allows to check and enable WoL:
+* Even if the BIOS doesn't show a WoL option, the network card might still support it.
+
+* The `ethtool` command allows to check and enable WoL:
   ```Bash
   ethtool -s <interface_name> wol g
   ```
-  Replace `<interface_name>` with your network interface
+
+* Replace `<interface_name>` with your network interface
+
 * This enables WoL using "magic packets".
 
 [Back to Top](#top)
 
 ---
 
-## Make the WoL Persistent
+## Make the WoL Persistent:
 
 * Edit the network configuration file:
   ```Bash
@@ -41,11 +47,11 @@
   ```
 
 * Find the configuration for `vmbr0` and its physical interface. It should something like this:
-```Bash
-auto enx00e04c36001d
-iface enx00e04c36001d inet manual
-    post-up ethtool -s enx00e04c36001d wol g
-```
+  ```Bash
+  auto enx00e04c36001d
+  iface enx00e04c36001d inet manual
+      post-up ethtool -s enx00e04c36001d wol g
+  ```
 
 * Save and exit the file.
 
@@ -70,7 +76,7 @@ ip addr
 
 ---
 
-## Send a Magic Packet
+## Send a Magic Packet:
 
 Let's use a tool to send a magic packet to the server's MAC Address:
 
@@ -91,7 +97,8 @@ Let's use a tool to send a magic packet to the server's MAC Address:
     sudo apt install wakeonlan
     wakeonlan -i 10.118.1.255 00:e0:4c:36:00:1d
     ```
-    * Take note of the broadcast address and MAC Address. 
+
+    * Replace the Broadcast Address and MAC Address accordingly.
 
   * Android / iOS:
     * Use an app like `Wake On LAN`
@@ -107,3 +114,31 @@ In networking, a bridge (like `vmbr0` in my setup) is used to connect multiple n
   * It enables virtual machines to share the same network as the Proxmox host, giving each VM its own IP address that’s accessible on the network.
 
 In simple terms, `vmbr0` is the bridge that links my laptop's physical Ethernet connection (`enx00e04c36001d`) to the VMs I’ll run in Proxmox, so everything communicates seamlessly on my home network.
+
+---
+
+## Ensuring USB Ethernet Interface Remains Powered during Shutdown:
+
+### 1. Check USB Power Management USettings
+
+1. Open the terminal and edit the USB power settings:
+2. Add the following parameter to the `GRUB_CMDLINE_LINUX_DEFAULT` line:
+3. Save and exit.
+4. Update GRUB to apply the changes:
+5. Reboot the system to ensure the changes take effect.
+
+### 2. Enable USB Wake Support
+Check if the USB Ethernet interface supports wake events:
+1. List all USB devices:
+2. Identify the USB Ethernet adapter and note the bus and device ID.
+3. Enable wake events for the device:
+
+### 3. Test USB Power During Shutdown
+After applying the above settings, shut down the Proxmox Machine and check if the USB Ethernet adapter remains powered (e.g., by observing its activity lights).
+
+### 4. BIOS/UEFI Settings
+Whenever possible, try disabling `Fast Boot` or similar feature to ensure USB ports remain powered.
+
+[Back to Top](#top)
+
+--- 
