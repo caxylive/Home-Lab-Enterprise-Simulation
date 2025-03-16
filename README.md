@@ -85,7 +85,7 @@ This project documents my journey in building a **home lab** that simulates a re
 ## 🔧 Setup Process and Documentation
 1. **Backup** files and create **[bootable drives](https://github.com/caxylive/Common-Commands/blob/main/linux%20terminal/bootable_usb.md)** (my tools of choices are **dd**, **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
 2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
-    a. Modify logind.conf so that the laptop stays powered on even when the lid is shut.
+    a. [Modify logind.conf](https://github.com/caxylive/Home-Lab-Enterprise-Simulation/blob/main/Setup_Guides/Prevent_Shutdown_When_Lid_Closed/README.md) so that the laptop stays powered on even when the lid is shut.
     b. Enable WOL (Wake-On-Lan) to remotely power on machine.
 4. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
 5. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
