@@ -20,21 +20,28 @@ This project documents my journey in building a **home lab** that simulates a re
 ---
 
 ## Table of Contents
-1. [Hardware](#hardware)
+1. [My Hardware](#my-hardware)
 2. [Software Requirements](#software-requirements)
 3. [Setup Process and Documentation](#-setup-process-and-documentation)
 4. [Lab Infrastructure](#lab-infrastructure)
-5. [Future Improvements](#-future-improvements)
+5. [Future Improvements](#🚀-future-improvements)
 6. [Advanced Hands-On Activities](#advanced-hands-on-activities)
 7. [Troubleshooting](#troubleshooting)
 
 ---
 
-## Hardware
-- **Laptop**: repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs. The more cores, memory, and storage, the better.
+## My Hardware
+- **Laptop**
+    - PM1: Repurposed laptop with Intel Core i7-1260P, 16GB RAM, and two 1TB SSDs.
+    - 
 - **Router**: I will **NOT** mention my router brand and model for security reasons (each model has their own unique **vulnerabilities** that hackers can **exploit** to gain access to your system)
-- **Cables**: RJ45 (Cat 5e or higher ; Cat 6a if budget allows)
-- **Peripherals**: WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
+
+- **Cables**: RJ45 (Cat 6a)
+
+- **Peripherals**:
+    - USB to Ethernet: to connect machine to router.
+    - WiFi Adapter ([TP-Link TL-WN722N](https://www.tp-link.com/ph/home-networking/adapter/tl-wn722n/) supports **monitoring mode** and **packet injection**)
+
 - **Backups**: external storage for backing up important files, ISOs, and software. Please see below for essential ISOs and softwares.
 
 [Back to Top](#top)
@@ -78,13 +85,15 @@ This project documents my journey in building a **home lab** that simulates a re
 ## 🔧 Setup Process and Documentation
 1. **Backup** files and create **[bootable drives](https://github.com/caxylive/Common-Commands/blob/main/linux%20terminal/bootable_usb.md)** (my tools of choices are **dd**, **Ventoy** and **Rufus**). Refer **[here](https://github.com/caxylive/Common-Commands/blob/main/cmd_scripts/batch_copy_files.bat)** for useful scripts for batch copying files.
 2. **[Install Proxmox VE](Setup_Guides/Proxmox_Install.md)** on the host machine.
-3. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
-4. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
-5. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
-6. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools): Wazuh, Suricata, etc.
-7. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
-8. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
-9. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
+    a. Modify logind.conf so that the laptop stays powered on even when the lid is shut.
+    b. Enable WOL (Wake-On-Lan) to remotely power on machine.
+4. **[Create and configure VMs](Setup_Guides/VM_Configuration.md)** with allocated resources.
+5. **[Set up core services](Setup_Guides/Server_Configuration)** (Active Directory, DNS, DHCP, File Server, etc.).
+6. **Secure the network** with **pfSense [firewall](Setup_Guides/Firewall_Configuration.md) & [VPN](Setup_Guides/VPN_Configuration)**.
+7. **Deploy cybersecurity tools** (SIEM, IDS/IPS, Pentesting tools): Wazuh, Suricata, etc.
+8. **Simulate the Network** with [GNS3](Setup_Guides/GNS3.md)
+9. **Simulate enterprise applications** (Web server, Database, Email, Docker apps).
+10. **Perform security testing** with [Kali Linux](Security/Kali_Pentest) & [Metasploitable](Security/Metasploit).
 
 [Back to Top](#top)
 
