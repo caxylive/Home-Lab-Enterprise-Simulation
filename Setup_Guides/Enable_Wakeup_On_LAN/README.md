@@ -84,13 +84,14 @@ Let's use a tool to send a magic packet to the server's MAC Address:
     $client.Send($packet, $packet.Length)
     $client.Close()
     ```
+    * `00:e0:4c:36:00:1d` is my USB RJ45's MAC Address. Replace it with the MAC Address of your interface.
 
   * Linux / macOS:
     ```Bash
     sudo apt install wakeonlan
     wakeonlan -i 10.118.1.255 00:e0:4c:36:00:1d
     ```
-    * Take note of the broadcast address and MAC Address 
+    * Take note of the broadcast address and MAC Address. 
 
   * Android / iOS:
     * Use an app like `Wake On LAN`
