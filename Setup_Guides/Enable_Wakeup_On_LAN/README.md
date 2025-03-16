@@ -1,105 +1,81 @@
 <a name="top"></a>
-[Back to Main]()
+[Back to Main](https://github.com/caxylive/Home-Lab-Enterprise-Simulation/blob/main/README.md)
 
 ---
 
-## Check USB Power Management Settings
+## Check Network Interface Support
 
-Linux systems often manage USB power through the `autosuspend` feature. You can disable it to ensure the USB interface remains active:
-
-1. Open the terminal and edit the USB power settings:
+* Open the Proxmox shell and run:
   ```Bash
-  nano /etc/default/grub
+  ethtool <interface_name>
   ```
-
-2. Add the following parameter to the `GRUB_CMDLINE_LINUX_DEFAULT` line:
-  ```
-  usbcore.autosuspend=-1
-  ```
-
-  For example:
-  ```
-  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash usbcore.autosuspend=-1"
-  ```
-
-3. Save and exit.
-
-4. Update GRUB to apply the changes:
-  ```Bash
-  update-grub
-  ```
-
-5. Reboot the system to ensure the changes take effect.
+  Look for a line like `Supports Wake-on: g`. If it says `g`, your network card supports WoL.
 
 [Back to Top](#top)
 
 ---
 
-## Disable USB Autosuspend
+## Enable WoL on the Network Interface (non-persistent)
 
-1. Open the GRUB configuration:
-   ```Bash
-   nano /etc/default/grub
-   ```
-
-2. Add the following parameter to the `GRUB_CMDLINE_LINUX_DEFAULT` line:
-   ```Bash
-   usbcore.autosuspend=-1
-   ```
-
-3. Save and exit.
-
-4. Update the GRUB:
-   ```Bash
-   update-grub
-   ```
-
-5. Reboot the system for the system for the changes to take effect:
-   ```Bash
-   reboot
-   ```
-
-6. 
-
----
-
-## Enable Wakeup for the USB Ethernet Adapter
-
-1. Find the adapter's device path:
+* Even if the BIOS doesn't show a WoL option, the network card might still support it. The `ethtool` command allows to check and enable WoL:
   ```Bash
-  ls /sys/bus/usb/devices/*/power/wakeup
+  ethtool -s <interface_name> wol g
   ```
-  Look for the path corresponding to the Ethernet Adapter (i.e., `Bus 001 Device 005`). It might look something like `/sys/bus/usb/devices/1-5/power/wakeup`.
+  Replace `<interface_name> with your network interface
+* This enables WoL using "magic packets".
 
-2. Enable wakeup on the `usb1` device:
+[Back to Top](#top)
 
-3. Verify that the wakeup setting is enabled:
+---
+
+## Make the WoL Persistent
+
+* Edit the network configuration file:
   ```Bash
-  cat /sys/bus/usb/devices/usb1/power/wakeup
+  nano /etc/network/interfaces
   ```
-  
-  It should return `enabled`.
-  
+
+* Add the following lines under your network interface configuration:
+  ```Bash
+  post-up ethtool -s enx00e04c36001d wol g
+  ```
+
+* Find the configuration for `vmbr0` and its physical interface. It should something like this:
+```Bash
+auto enx00e04c36001d
+iface enx00e04c36001d inet manual
+    post-up ethtool -s enx00e04c36001d wol g
+```
+
+* Save and exit the file.
+
+* Restart the networking service to apply changes:
+  ```Bash
+  systemctl restart networking
+  ```
+
+[Back to Top](#top)
+
 ---
 
+## Retrieve the MAC Address
+* Run:
+```Bash
+ip addr
+```
+
+* Note the MAC address of your network interface.
+
+[Back to Top](#top)
 
 ---
 
-## Test the Configuration
+## What is a Bridge?
 
-1. Shutdown the Proxmox machine:
-2. Try sending the Wake-on-LAN magic packet:
-   ```Bash
-   wakeonlan <your_usb_rj45_adapter_mac_address>
-   ```
+In networking, a bridge (like `vmbr0` in my setup) is used to connect multiple network interfaces and allow communication between them. In the context of Proxmox:
 
----
+  * A bridge acts like a virtual switch, connecting my physical network interface (e.g., `enx00e04c36001d`) to my virtual machines.
 
-## Additional Notes
+  * It enables virtual machines to share the same network as the Proxmox host, giving each VM its own IP address that’s accessible on the network.
 
-* If `usb1` does ot seem to work, you can also try enabling wakeup for the other candidates (`1-8` or `usb2`).
-* To make the wakeup configuration persistent across reboots, you can add the appropriate command to a startup script (e.g., `/etc/rc.local`).
-
----
-
- 
+In simple terms, `vmbr0` is the bridge that links my laptop's physical Ethernet connection (`enx00e04c36001d`) to the VMs I’ll run in Proxmox, so everything communicates seamlessly on my home network.
