@@ -21,7 +21,7 @@
   ```Bash
   ethtool -s <interface_name> wol g
   ```
-  Replace `<interface_name> with your network interface
+  Replace `<interface_name>` with your network interface
 * This enables WoL using "magic packets".
 
 [Back to Top](#top)
@@ -67,6 +67,33 @@ ip addr
 * Note the MAC address of your network interface.
 
 [Back to Top](#top)
+
+---
+
+## Send a Magic Packet
+
+Let's use a tool to send a magic packet to the server's MAC Address:
+
+  * Windows PowerShell:
+    ```Powershell
+    $mac = "00:e0:4c:36:00:1d"
+    $packet = [byte[]](,0xFF * 102)
+    6..101 | ForEach-Object { $packet[$_] = [byte[]]::Parse($mac.Replace(":", "").Substring(($_ % 6) * 2, 2), "X2") }
+    $client = New-Object System.Net.Sockets.UdpClient
+    $client.Connect("255.255.255.255", 9)
+    $client.Send($packet, $packet.Length)
+    $client.Close()
+    ```
+
+  * Linux / macOS:
+    ```Bash
+    sudo apt install wakeonlan
+    wakeonlan -i 10.118.1.255 00:e0:4c:36:00:1d
+    ```
+    * Take note of the broadcast address and MAC Address 
+
+  * Android / iOS:
+    * Use an app like `Wake On LAN`
 
 ---
 
