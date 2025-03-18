@@ -22,8 +22,25 @@ This guide provides step-by-step instructions for ensuring the Proxmox web inter
 This script checks the status of the `pveproxy` service every 5 seconds and restarts it if needed.
 
 #### 1. Create the script:
+```Bash
+nano /usr/local/bin/check_pveproxy_10s.sh
+```
+
 #### 2. Add the following content:
+```Bash
+#!/bin/bash
+while true; do
+    if ! systemctl is-active --quiet pveproxy; then
+        systemctl start pveproxy
+    fi
+    sleep 10
+done
+```
+
 #### 3. Make the script executable:
+```Bash
+chmod +x /usr/local/bin/check_pveproxy_10s.sh
+```
 
 [Back to Top](#top)
 
@@ -34,7 +51,15 @@ This script checks the status of the `pveproxy` service every 5 seconds and rest
 To ensure the script starts at boot and runs continuously in the background:
 
 #### 1. Edit crontab:
+```Bash
+crontab -e
+```
+
 #### 2. Add the following line to run the script at system startup:
+```Bash
+@reboot /usr/local/bin/check_pveproxy.sh &
+```
+
   * `@reboot` : Ensures the script runs automatically after the system boots.
   * `&` : Runs the script in the background, so it doesn't block other processes.
 
@@ -47,9 +72,24 @@ To ensure the script starts at boot and runs continuously in the background:
 ### 3. Verify the Setup
 
 #### 1. Reboot the server to confirm that the script starts automatically:
+```Bash
+reboot
+```
+
 #### 2. After rebooting, check if the script is running:
+```Bash
+ps aux | grep check_pveproxy.sh
+```
+
 #### 3. Manually stop the `pveproxy` service to test recovery:
+```Bash
+systemctl stop pveproxy
+```
+
 #### 4. Wait 5 seconds and verify that the service restarts automatically:
+```Bash
+systemctl status pveproxy
+```
 
 [Back to Top](#top)
 
