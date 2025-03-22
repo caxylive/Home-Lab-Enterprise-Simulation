@@ -54,30 +54,30 @@
   ```
 * Edit the `/etc/network/interfaces` to look something like this:
 
-```
-auto lo
-iface lo inet loopback
+  ```
+  auto lo
+  iface lo inet loopback
 
-# Physical interface
-auto enx00e04c36001d
-iface enx00e04c36001d inet manual
-    post-up ethtool -s enx00e04c36001d wol g
+  # Physical interface
+  auto enx00e04c36001d
+  iface enx00e04c36001d inet manual
+      post-up ethtool -s enx00e04c36001d wol g
 
-# Bridge interface for VMs/containers
-auto vmbr0
-iface vmbr0 inet static
-    address 10.118.1.254/24
-    gateway 10.118.1.1
-    bridge-ports enx00e04c36001d
-    bridge-stp off
-    bridge-fd 0
+  # Bridge interface for VMs/containers
+  auto vmbr0
+  iface vmbr0 inet static
+      address 10.118.1.254/24
+      gateway 10.118.1.1
+      bridge-ports enx00e04c36001d
+      bridge-stp off
+      bridge-fd 0
 
-# Wireless interface (manual, no IP config for now)
-iface wlp0s20f3 inet manual
+  # Wireless interface (manual, no IP config for now)
+  iface wlp0s20f3 inet manual
 
-# Source additional configurations
-source /etc/network/interfaces.d/*
-```
+  # Source additional configurations
+  source /etc/network/interfaces.d/*
+  ```
 
 * Save and exit the file.
 
