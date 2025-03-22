@@ -147,23 +147,83 @@ In simple terms, `vmbr0` is the bridge that links my laptop's physical Ethernet 
 
 ### 1. Check USB Power Management USettings
 
-1. Open the terminal and edit the USB power settings:
+1. Open the terminal and edit the GRUB configuration file:
+  ```Bash
+  sudo nano /etc/default/grub
+  ```
+
 2. Add the following parameter to the `GRUB_CMDLINE_LINUX_DEFAULT` line:
+  ```Bash
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash usbcore.autosuspend=-1"
+  ```
+  The `usbcore.autosuspend=-1` parameter disables USB autosuspend to keep USB devices powered.
+
 3. Save and exit.
-4. Update GRUB to apply the changes:
-5. Reboot the system to ensure the changes take effect.
+  `CTRL + O`
+  `Enter`
+  `CTRL + X`
+
+5. Update GRUB to apply the changes:
+  ```Bash
+  sudo update-grub
+  ```
+
+6. Reboot the system to ensure the changes take effect.
+  ```Bash
+  sudo reboot
+  ```
 
 ### 2. Enable USB Wake Support
 Check if the USB Ethernet interface supports wake events:
 1. List all USB devices:
+  ```Bash
+  lsusb
+  ```
+  Look for your USB Ethernet adapter in the output (e.g., it might show as "ASIX Electronics USB Ethernet Adapter").
+
 2. Identify the USB Ethernet adapter and note the bus and device ID.
-3. Enable wake events for the device:
+
+3. Enable wake events for the device. Use the following command, replacing `X-Y` with the correct bus and device ID (e.g., `2-3` for Bus 002, Device 003):
+  ```Bash
+  echo enabled | sudo tee /sys/bus/usb/devices/usbX-Y/power/wakeup
+  ```
+  For example:
+  ```Bash
+  echo enabled | sudo tee /sys/bus/usb/devices/2-3/power/wakeup
+  ```
 
 ### 3. Test USB Power During Shutdown
-After applying the above settings, shut down the Proxmox Machine and check if the USB Ethernet adapter remains powered (e.g., by observing its activity lights).
+After applying the above settings:
+
+1. Shut down the Proxmox Machine:
+  ```Bash
+  sudo poweroff
+  ```
+
+2. Check if the USB Ethernet adapter remains powered (e.g., by observing its activity lights). If it stays on, it's ready to receive the magic packet.
 
 ### 4. BIOS/UEFI Settings
 Whenever possible, try disabling `Fast Boot` or similar feature to ensure USB ports remain powered.
+
+### 5. Persisting the Changes
+To make the settings persistent across reboots, create a custom `udev` rule:
+
+1. Create a new udev rule:
+  ```Bash
+  sudo nano /etc/udev/rules.d/50-usb-wakeup.rules
+  ```
+
+2. Add the following line, replacing `X-Y` with the correct bus and device ID:
+  ```Bash
+  ACTION=="add", SUBSYSTEM=="usb", ATTR{power/wakeup}="enabled"
+  ```
+
+3. Reload the udev rules:
+  ```Bash
+  sudo udevadm control --reload
+  ```
+
+This ensures the wakeup setting is re-applied whenever the USB Ethernet adapter is detected.
 
 [Back to Top](#top)
 
