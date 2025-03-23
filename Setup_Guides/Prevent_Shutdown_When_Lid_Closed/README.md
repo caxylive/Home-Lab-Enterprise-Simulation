@@ -58,7 +58,7 @@ This configuration ensures the system will ignore the lid-close event under all 
 
 After saving the file (CTRL+O, then CTRL+X to exit nano), restart the systemd-logind service to apply the changes:
 ```bash
-systemctl restart systemd-logind
+systemctl restart systemd.logind.service
 ```
 
 ---
